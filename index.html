@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPENDATA 臺中-餐餐具到好餐廳</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1 id="title">臺中餐餐具到好餐廳</h1>
+    <div id="restaurant" >
+        <div id="box" v-for="(item, index) in datas" :key="1">
+            <h1>餐廳名稱 : {{ item["品牌名稱"]}}</h1>
+            <h3>電話 : {{ item["連絡電話"]}}</h3>
+            <h3>地址 :{{ item["聯絡地址"]}}</h3> 
+            <h2>優惠: {{ item["好康內容"]}}</h2>
+        </div>
+    </div>
+    
+    <!-- vue CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="./restaurant.js"></script>
+</body>
+</html>
